@@ -6,7 +6,11 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  /* your logic here...*/
+  var newArr=[];
+  for(var i=0; i<arr.length; i++) {
+  	newArr.push(arr[i].flags);
+  }
+  return newArr;
 };
 
 export default getFlags;

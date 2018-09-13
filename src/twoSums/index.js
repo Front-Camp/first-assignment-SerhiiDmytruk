@@ -9,7 +9,19 @@
  * twoSums([5, 9, 3], 12); // [9, 3]
  */
 const twoSums = (arr, base) => {
-  /* your logic here...*/
+  let map=[];
+  let narr=[];
+  for (let x=0; x<arr.length; x++) {
+  	if(map[arr[x]]!=null) {
+  		let el=arr[x];
+  		narr[0]=el;
+  		narr[1]=arr[x+1];
+  		break;
+  	} else {
+  		map[base-arr[x]]=x;
+  	}
+  }
+  return narr;
 };
 
 export default twoSums;
